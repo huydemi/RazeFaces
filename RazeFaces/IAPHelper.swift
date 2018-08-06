@@ -83,7 +83,7 @@ extension IAPHelper {
   }
   
   public class func canMakePayments() -> Bool {
-    return true
+    return SKPaymentQueue.canMakePayments()
   }
   
   public func restorePurchases() {
