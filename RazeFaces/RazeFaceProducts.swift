@@ -31,8 +31,9 @@ import Foundation
 public struct RazeFaceProducts {
   
   public static let SwiftShopping = "com.huydang.RazeFaces.swiftshopping"
+  public static let SwiftShoppingTest = "com.huydang.RazeFaces.swiftshoppingtest"
   
-  private static let productIdentifiers: Set<ProductIdentifier> = [RazeFaceProducts.SwiftShopping]
+  private static let productIdentifiers: Set<ProductIdentifier> = [RazeFaceProducts.SwiftShopping, RazeFaceProducts.SwiftShoppingTest]
 
   public static let store = IAPHelper(productIds: RazeFaceProducts.productIdentifiers)
 }
