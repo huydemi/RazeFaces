@@ -44,8 +44,18 @@ open class IAPHelper: NSObject  {
   
   public init(productIds: Set<ProductIdentifier>) {
     productIdentifiers = productIds
+    for productIdentifier in productIds {
+      let purchased = UserDefaults.standard.bool(forKey: productIdentifier)
+      if purchased {
+        purchasedProductIdentifiers.insert(productIdentifier)
+        print("Previously purchased: \(productIdentifier)")
+      } else {
+        print("Not purchased: \(productIdentifier)")
+      }
+    }
     super.init()
   }
+
 }
 
 // MARK: - StoreKit API
@@ -65,7 +75,7 @@ extension IAPHelper {
   }
   
   public func isProductPurchased(_ productIdentifier: ProductIdentifier) -> Bool {
-    return false
+    return purchasedProductIdentifiers.contains(productIdentifier)
   }
   
   public class func canMakePayments() -> Bool {
