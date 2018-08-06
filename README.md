@@ -17,4 +17,4 @@ In this in-app purchase tutorial, you’ll leverage IAPs to unlock extra content
 
 Source:
 
-- [UIGestureRecognizer Tutorial: Getting Started](https://www.raywenderlich.com/162745/uigesturerecognizer-tutorial-getting-started)
+- [In-App Purchase Tutorial: Getting Started](https://www.raywenderlich.com/194869/in-app-purchase-tutorial-getting-started)
